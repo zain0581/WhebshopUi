@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- Header Section for Shop Name and Admin Button -->
+    <RelativeLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/colorAccent"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <!-- Shop Title in Header -->
+        <TextView
+            android:id="@+id/shop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="My Shop"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Admin Button for navigation to product creation -->
+        <Button
+            android:id="@+id/admin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/white"
+            android:text="Admin"
+            android:textColor="@android:color/background_dark"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/baseline_admin_panel_settings_24" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <!-- ListView for showing items -->
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/header_section"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:layout_above="@id/footer_text"
+        android:background="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Floating Action Button for viewing the cart -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_view_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/ic_action_name"
+        android:contentDescription="View Cart"
+        app:backgroundTint="@color/colorAccent"
+        app:tint="@android:color/white"
+        android:elevation="8dp"
+        app:fabSize="normal" />
+
+    <!-- Footer Section with Shop Info -->
+    <TextView
+        android:id="@+id/footer_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:text="Welcome to My Shop! Browse our latest products."
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@color/colorAccent"
+        android:textSize="16sp" />
+
+</RelativeLayout>
